@@ -1,4 +1,3 @@
-import React, {Component, PropTypes} from 'react';
 import propTypes from '../utils/propTypes';
 import transitions from '../styles/transitions';
 
@@ -29,29 +28,29 @@ function getStyles(props, context) {
   };
 }
 
-class Paper extends Component {
+class Paper extends React.Component {
   static propTypes = {
     /**
      * Children passed into the paper element.
      */
-    children: PropTypes.node,
+    children: React.PropTypes.node,
     /**
      * Set to true to generate a circlular paper container.
      */
-    circle: PropTypes.bool,
+    circle: React.PropTypes.bool,
     /**
      * By default, the paper container will have a border radius.
      * Set this to false to generate a container with sharp corners.
      */
-    rounded: PropTypes.bool,
+    rounded: React.PropTypes.bool,
     /**
      * Override the inline-styles of the root element.
      */
-    style: PropTypes.object,
+    style: React.PropTypes.object,
     /**
      * Set to false to disable CSS transitions for the paper element.
      */
-    transitionEnabled: PropTypes.bool,
+    transitionEnabled: React.PropTypes.bool,
     /**
      * This number represents the zDepth of the paper shadow.
      */
@@ -66,7 +65,7 @@ class Paper extends Component {
   };
 
   static contextTypes = {
-    muiTheme: PropTypes.object.isRequired,
+    muiTheme: React.PropTypes.object.isRequired,
   };
 
   render() {

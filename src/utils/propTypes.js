@@ -1,11 +1,9 @@
-import {PropTypes} from 'react';
-
 const horizontal = PropTypes.oneOf(['left', 'middle', 'right']);
 const vertical = PropTypes.oneOf(['top', 'center', 'bottom']);
 
 export default {
 
-  corners: PropTypes.oneOf([
+  corners: React.PropTypes.oneOf([
     'bottom-left',
     'bottom-right',
     'top-left',
@@ -16,12 +14,12 @@ export default {
 
   vertical: vertical,
 
-  origin: PropTypes.shape({
+  origin: React.PropTypes.shape({
     horizontal: horizontal,
     vertical: vertical,
   }),
 
-  cornersAndCenter: PropTypes.oneOf([
+  cornersAndCenter: React.PropTypes.oneOf([
     'bottom-center',
     'bottom-left',
     'bottom-right',
@@ -30,11 +28,11 @@ export default {
     'top-right',
   ]),
 
-  stringOrNumber: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
+  stringOrNumber: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.number,
   ]),
 
-  zDepth: PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
+  zDepth: React.PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
 
 };
